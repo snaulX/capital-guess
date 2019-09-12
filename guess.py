@@ -4,10 +4,6 @@ import datetime
 import os
 import constructor
 
-os.system('cls')
-global points, colour, v
-colour = 'light green'
-v = 'v 1.0.12'
 def cis ():
     countries = cycle(['России', 'Казахстана', 'Украины', 'Республики Беларусь', 'Армении', 'Азейбарджана', 'Узбекистана', 'Молдавии', 'Таджикистана', 'Киргизии'])
     capitals = cycle(['Москва', 'Астана', 'Киев', 'Минск', 'Ереван', 'Баку', 'Ташкент', 'Кишинёв', 'Душанбе', 'Бишкек'])
@@ -179,19 +175,23 @@ def result ():
             results = str(results + resultln)
             resultln = file.readline()
         Label(win, text = results).pack()
-root = Tk()
-root.title('Викторина по Столицам {}'.format(v))
-root.wm_state('zoomed')
-root.configure(bg = 'green')
-Button(root, command = easy, text = 'Лёгкий', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 0, ipadx = 10, ipady = 6, padx = 10, pady = 10)
-Button(root, command = cis, text = 'СНГ', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 1, ipadx = 10, ipady = 6, padx = 10, pady = 10)
-Button(root, command = medium, text = 'Средний', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 2, ipadx = 10, ipady = 6, padx = 10, pady = 10)
-Button(root, command = hard, text = 'Сложный', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 3, ipadx = 10, ipady = 6, padx = 10, pady = 10)
-Button(root, command = instruction, text = 'Инструкция', width = 30, height = 3, bg = colour, activebackground = colour).grid(row = 2, column = 0, ipadx=10, ipady=6, padx=10, pady=10)
-Button(root, command = afric, text = 'Африка', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 4, ipadx = 10, ipady = 6, padx = 10, pady = 10)
-Button(root, command = asia, text = 'Азия', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 5, ipadx=10, ipady=6, padx=10, pady=10)
-Button(root, command = answer, text = 'Ответы', width = 30, height = 3, bg = colour, activebackground = colour).grid(row = 3, column = 0, ipadx=10, ipady=6, padx=10, pady=10)
-Button(root, command = result, text = 'Результаты', width = 150, height = 3, bg = colour, activebackground = colour).grid(row = 5, column = 0, ipadx=10, ipady=6, padx=10, pady=10, columnspan = 4)
-Button(root, command = constructor.simpletest_for_cc, text = 'Конструктор тестов для Викторины', width = 150, height = 3, bg = colour, activebackground = colour).grid(row = 6, column = 0, ipadx=10, ipady=6, padx=10, pady=10, columnspan = 4)
-Button(root, command = europe, text = 'Европа', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 1, column = 0, ipadx=10, ipady=6, padx=10, pady=10)
-Button(root, command = lambda: exit(), text = 'Выход', width = 150, height = 3, bg = colour, activebackground = colour).grid(row = 7, column = 0, ipadx=10, ipady=6, padx=10, pady=10, columnspan = 4)
+if __name__ == "__main__":
+    colour = 'light green'
+    v = 'v 1.0.12'
+    root = Tk()
+    root.title('Викторина по Столицам {}'.format(v))
+    root.wm_state('zoomed')
+    root.configure(bg = 'green')
+    Button(root, command = easy, text = 'Лёгкий', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 0, ipadx = 10, ipady = 6, padx = 10, pady = 10)
+    Button(root, command = cis, text = 'СНГ', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 1, ipadx = 10, ipady = 6, padx = 10, pady = 10)
+    Button(root, command = medium, text = 'Средний', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 2, ipadx = 10, ipady = 6, padx = 10, pady = 10)
+    Button(root, command = hard, text = 'Сложный', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 3, ipadx = 10, ipady = 6, padx = 10, pady = 10)
+    Button(root, command = instruction, text = 'Инструкция', width = 30, height = 3, bg = colour, activebackground = colour).grid(row = 2, column = 0, ipadx=10, ipady=6, padx=10, pady=10)
+    Button(root, command = afric, text = 'Африка', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 4, ipadx = 10, ipady = 6, padx = 10, pady = 10)
+    Button(root, command = asia, text = 'Азия', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 0, column = 5, ipadx=10, ipady=6, padx=10, pady=10)
+    Button(root, command = answer, text = 'Ответы', width = 30, height = 3, bg = colour, activebackground = colour).grid(row = 3, column = 0, ipadx=10, ipady=6, padx=10, pady=10)
+    Button(root, command = result, text = 'Результаты', width = 150, height = 3, bg = colour, activebackground = colour).grid(row = 5, column = 0, ipadx=10, ipady=6, padx=10, pady=10, columnspan = 4)
+    Button(root, command = constructor.simpletest_for_cc, text = 'Конструктор тестов для Викторины', width = 150, height = 3, bg = colour, activebackground = colour).grid(row = 6, column = 0, ipadx=10, ipady=6, padx=10, pady=10, columnspan = 4)
+    Button(root, command = europe, text = 'Европа', width = 30, height = 6, bg = colour, activebackground = colour).grid(row = 1, column = 0, ipadx=10, ipady=6, padx=10, pady=10)
+    Button(root, command = lambda: exit(), text = 'Выход', width = 150, height = 3, bg = colour, activebackground = colour).grid(row = 7, column = 0, ipadx=10, ipady=6, padx=10, pady=10, columnspan = 4)
+    root.mainloop()
