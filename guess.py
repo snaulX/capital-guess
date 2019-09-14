@@ -1,7 +1,6 @@
 from tkinter import Tk, simpledialog, messagebox, Button, Label
 from itertools import cycle
 import datetime
-import os
 import constructor
 
 def cis ():
