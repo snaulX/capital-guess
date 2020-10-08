@@ -1,6 +1,6 @@
 from tkinter import Tk, simpledialog, messagebox, Button, Label
 from itertools import cycle
-import datetime
+from datetime import datetime
 import constructor
 
 def cis ():
@@ -20,7 +20,8 @@ def cis ():
     name = simpledialog.askstring('Сохранение результата', 'Будете ли вы сохранять результат? Если нет, то введите no. Иначе введите имя:')
     if name.lower() != 'no':
         with open('results.txt', 'a', encoding = 'utf-8') as file:
-            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: СНГ    дата игры: ' + str(datetime.datetime.now()) + '   ' + v)
+            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: СНГ    дата игры: ' + str(
+                datetime.now()) + '   ' + v)
 def easy ():
     capitals = cycle(['Париж', 'Вашингтон', 'Пекин', 'Токио', 'Лондон', 'Рим', 'Берлин', 'Мадрид', 'Афины', 'Анкара'])
     countries = cycle(['Франции', 'США', 'Китая', 'Японии', 'Великобритании', 'Италии', 'Германии', 'Испании', 'Греции', 'Турции'])
@@ -38,7 +39,8 @@ def easy ():
     name = simpledialog.askstring('Сохранение результата', 'Будете ли вы сохранять результат? Если нет, то введите no. Иначе введите имя:')
     if name.lower() != 'no':
         with open('results.txt', 'a', encoding = 'utf-8') as file:
-            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Лёгкий    дата игры: ' + str(datetime.datetime.now()) + '   ' + v)
+            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Лёгкий    дата игры: ' + str(
+                datetime.now()) + '   ' + v)
 def medium ():
     capitals = cycle(['Хельсинки', 'Дели', 'Бангкок', 'Тблиси', 'Стокгольм', 'Сеул', 'Улан-Батор', 'Рига', 'Прага', 'Мехико'])
     countries = cycle(['Финляндии', 'Индии', 'Таиланда', 'Грузии', 'Швеции', 'Южной Кореи', 'Монголии', 'Латвии', 'Чехии', 'Мексики'])
@@ -56,7 +58,8 @@ def medium ():
     name = simpledialog.askstring('Сохранение результата', 'Будете ли вы сохранять результат? Если нет, то введите no. Иначе введите имя:')
     if name.lower() != 'no':
         with open('results.txt', 'a', encoding = 'utf-8') as file:
-            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Средний    дата игры: ' + str(datetime.datetime.now()) + '   ' + v)
+            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Средний    дата игры: ' + str(
+                datetime.now()) + '   ' + v)
 def hard ():
     capitals = cycle(['Бразилиа', 'Канберра', 'Буэнос-Айрес', 'Монтевидео', 'Веллингтон', 'Абу-Даби', 'Лиссабон', 'Оттава', 'Куала-Лумпур', 'Каир'])
     countries = cycle(['Бразилии', 'Австралии', 'Аргентины', 'Уругвая', 'Новой Зеландии', 'ОАЭ', 'Португалии', 'Канады', 'Малайзии', 'Египта'])
@@ -74,7 +77,8 @@ def hard ():
     name = simpledialog.askstring('Сохранение результата', 'Будете ли вы сохранять результат? Если нет, то введите no. Иначе введите имя:')
     if name.lower() != 'no':
         with open('results.txt', 'a', encoding = 'utf-8') as file:
-            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Сложный    дата игры: ' + str(datetime.datetime.now()) + '   ' + v)
+            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Сложный    дата игры: ' + str(
+                datetime.now()) + '   ' + v)
 def afric ():
     capitals = cycle(['Яунде', 'Претория', 'Алжир', 'Рабат', 'Тунис', 'Хартум', 'Могадишо', 'Луанда', 'Антананариву', 'Мапуту'])
     countries = cycle(['Камеруна', 'ЮАРа', 'Алжира', 'Марокко', 'Туниса', 'Судана', 'Сомали', 'Анголы', 'Мадагаскара', 'Мозамбика'])
@@ -92,7 +96,8 @@ def afric ():
     name = simpledialog.askstring('Сохранение результата', 'Будете ли вы сохранять результат? Если нет, то введите no. Иначе введите имя:')
     if name.lower() != 'no':
         with open('results.txt', 'a', encoding = 'utf-8') as file:
-            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Африка    дата игры: ' + str(datetime.datetime.now()) + '   ' + v)
+            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Африка    дата игры: ' + str(
+                datetime.now()) + '   ' + v)
 def asia ():
     capitals = cycle(['Джакарта', 'Тегеран', 'Ханой', 'Пномпень', 'Багдад', 'Эр-Рияд', 'Улан-Батор', 'Сеул', 'Дакка', 'Исламбад'])
     countries = cycle(['Индонезии', 'Ирана', 'Вьетнама', 'Камбоджи', 'Ирака', 'Саудовской Аравии', 'Монголии', 'Южной Кореи', 'Бангладеша', 'Пакистана'])
@@ -110,7 +115,8 @@ def asia ():
     name = simpledialog.askstring('Сохранение результата', 'Будете ли вы сохранять результат? Если нет, то введите no. Иначе введите имя:')
     if name.lower() != 'no':
         with open('results.txt', 'a', encoding = 'utf-8') as file:
-            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Азия    дата игры: ' + str(datetime.datetime.now()) + '   ' + v)
+            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Азия    дата игры: ' + str(
+                datetime.now()) + '   ' + v)
 def europe ():
     capitals = cycle(['Рейкъявик', 'Белград', 'Братислава', 'Бухарест', 'Варшава', 'Вильнюс', 'София', 'Амстердам', 'Брюссель', 'Вена'])
     countries = cycle(['Исландии', 'Сербии', 'Словакии', 'Румынии', 'Польши', 'Литвы', 'Болгарии', 'Нидерландов', 'Бельгии', 'Австрии'])
@@ -128,7 +134,8 @@ def europe ():
     name = simpledialog.askstring('Сохранение результата', 'Будете ли вы сохранять результат? Если нет, то введите no. Иначе введите имя:')
     if name.lower() != 'no':
         with open('results.txt', 'a', encoding = 'utf-8') as file:
-            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Европа    дата игры: ' + str(datetime.datetime.now()) + '   ' + v)
+            file.write('\nИгрок: ' + name + '   очки: ' + str(points) + '   уровень сложности/режим: Европа    дата игры: ' + str(
+                datetime.now()) + '   ' + v)
 def instruction () :
     messagebox.showinfo('Инструкция','Столицы записываются с большой буквы. \nЕсли столица пишется через тире, то писать так: Нью-Йорк.\n*Нью-Йорк не является столицей и был показан только в качестве примера.')
 def answer ():
@@ -174,6 +181,7 @@ def result ():
             results = str(results + resultln)
             resultln = file.readline()
         Label(win, text = results).pack()
+
 if __name__ == "__main__":
     colour = 'light green'
     v = 'v 1.0.12'
